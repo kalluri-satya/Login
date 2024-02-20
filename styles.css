@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+    color: #fff;
+    background-image: url('tennis1.png'); /* Background image URL */
+    background-size: 10%; 
+    background-size: cover; /* Cover the entire background */
+    background-position: right; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    max-width: 100px;
+  }
+  
+  .menu {
+    flex-grow: 1;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .search-icon button, .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    margin-left: 10px;
+  }
+  
+  .page-content {
+    display: none;
+    text-align: center;
+    min-height: 100vh; /* Set a minimum height for vertical centering */
+  }
+  
+  .page-content h2,
+  .page-content p {
+    margin: 0;
+  }
+  
+  .page-content:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .line-container {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.line-segment {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: 2px;
+    background-color: #f6f2f2;
+    transition: all 0.3s ease;
+}
+
+.line-text {
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    color: #fff;
+   
+    padding: 5px 10px;
+ 
+}
+
+.line-container:hover .line-segment {
+    width: 50%;
+    height: 5px;
+}
+
+.line-container:hover .line-text {
+    display: block;
+    cursor: pointer;
+    margin-left: -10px;
+}
